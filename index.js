@@ -24,6 +24,11 @@ app.use(function (req, res, next) {
     next();
   });
 
+  const barang = require('./sql_test')
+
+  app.get('/api/sql1',barang.getBarang);
+
+  app.get('/api/sql2',barang.stokBarang);
 
   const fibonacii = require('./fibonacii')
 
